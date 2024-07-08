@@ -24,5 +24,12 @@ Route::get('/contact', function () {
 });
 
 Route::get('/produtos', function () {
-    return view('products');
+
+    $busca = request('search');
+
+    return view('products', ['busca' => $busca]);
+});
+
+Route::get('/produto/{id?}', function ($id = null) { // $id = null ==> null como default
+    return view('product', ['id' => $id]);           // {id?} o ? torna o parametro opcional
 });

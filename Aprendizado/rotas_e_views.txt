@@ -42,3 +42,11 @@ Blade é a template engine
     $loop->odd: Retorna true se a iteração atual for ímpar.
     $loop->depth: A profundidade do loop atual, útil para loops aninhados.
     $loop->parent: Referência ao loop pai quando em loops aninhados.
+
+
+
+
+
+    *** PARÂMETROS EM ROTAS ***
+
+    

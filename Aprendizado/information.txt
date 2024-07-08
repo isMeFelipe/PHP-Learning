@@ -1,0 +1,28 @@
+Personal Home Page (PHP)
+
+php nome_do_arquivo.php
+
+php -S localhost:8000 (execução em página html com servidor local)
+
+
+
+O que é Laravel?
+--> Framework construido na linguagem PHP
+--> Utiliza MVC ( Model == dados; Controller == lógica; View == dados exibidos == template engine == blade)
+--> Estrutura Simples
+
+
+
+
+*** Criação de projeto: ***
+--> Precisa do composer instalado
+---> composer global require laravel/installer // para garantir a instalação global do laravel
+
+
+
+composer create-project --prefer-dist laravel/laravel nomeDoProjeto
+
+
+
+*** Executar laravel app ***
+php artisan serve

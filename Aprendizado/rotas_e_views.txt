@@ -1,0 +1,44 @@
+Blade é a template engine
+--> Torna as views dinamicas
+--> Permite colocar HTML puro e dados fornecidos pelo banco de dados
+
+
+// Passar dados da rota para a view
+    // Enviando
+        Route::get('/', function () {
+            $nome = "Felipe Moura";
+            $idade = 21;
+            $profissao = "programação";
+
+            return view('welcome', [ 'nome' => $nome, 'idade' => $idade, 'profissao' => $profissao ]);
+        });
+
+    // Chamando
+
+        {{$nome}} {{$idade}} {{$profissao}}
+
+
+
+// Comentários dentro da view: (Não é renderizado na view, aparece apenas no Blade)
+    {{-- comentario --}}
+
+
+
+
+// Variável integrada no blade "loop"
+
+    Está disponível dentro de estruturas de controle de loop como @foreach, @for, e @while.
+
+    Propriedades da Variável $loop
+    Aqui estão algumas das propriedades disponíveis na variável $loop:
+
+    $loop->index: O índice atual do loop (começando em 0).
+    $loop->iteration: O número atual da iteração do loop (começando em 1).
+    $loop->remaining: O número de iterações restantes do loop.
+    $loop->count: O número total de itens no loop.
+    $loop->first: Retorna true se for a primeira iteração do loop.
+    $loop->last: Retorna true se for a última iteração do loop.
+    $loop->even: Retorna true se a iteração atual for par.
+    $loop->odd: Retorna true se a iteração atual for ímpar.
+    $loop->depth: A profundidade do loop atual, útil para loops aninhados.
+    $loop->parent: Referência ao loop pai quando em loops aninhados.

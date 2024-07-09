@@ -1,0 +1,10 @@
+Realiza Actions
+
+Enviar e esperar a resposta do banco de dados
+Receber respostas e enviar para views
+
+
+
+// Criação de controller (normalmente no singular)
+php artisan make:controller NomeDoController
+

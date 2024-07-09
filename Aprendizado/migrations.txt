@@ -1,0 +1,51 @@
+*** COMANDO PARA REALIZAR MIGRATIONS ***
+php artisan migrate
+
+
+*** Status da migration ****
+migrate:status
+
+*** Reiniciar a migration *** (Apaga os dados existentes)
+php artisan migrate:fresh
+
+*** Adicionar  ***
+php artisan make:migration add_category_to_products_table
+
+// Tem os campos que devems ser excluidos em caso de rollback (foram adicionados nessa migration)
+function down()
+
+
+
+*** COMANDOS ***
+
+Criar uma Nova Migração
+php artisan make:migration create_users_table
+
+Executar Migrações
+php artisan migrate
+
+Reverter Migrações
+php artisan migrate:rollback
+
+Para reverter um número específico de "lotes":
+php artisan migrate:rollback --step=2
+
+Refazer Migrações
+php artisan migrate:refresh
+
+Para também semear o banco de dados após a atualização:
+php artisan migrate:refresh --seed
+
+Redefinir Migrações
+Para reverter todas as migrações e, em seguida, executá-las novamente:
+php artisan migrate:reset
+php artisan migrate
+
+Verificar o Status das Migrações
+php artisan migrate:status
+
+Reverter uma Migração Específica
+php artisan migrate:rollback --path=/database/migrations/2021_01_01_000000_create_users_table.php
+
+Listar Todos os Comandos de Migração
+php artisan list migrate

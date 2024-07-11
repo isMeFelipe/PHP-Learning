@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
 
+Route::get('/teste', function () {
+    return ('<h1>Teste</h1>');
+});
+
 Route::get('/', [EventController::class, 'index']);
 Route::get('/events/create', [EventController::class, 'create']);
 
